@@ -1,3 +1,34 @@
+
+### [2026-09-29 14:58:37 UTC] feat(frontend): preparare avvio locale e punti di accesso per test manuale
+Implementazione: come li posso testare di persona?
+
+File coinvolti:
+- frontend/package.json (29 righe)
+- frontend/next.config.js (10 righe)
+- frontend/src/components/tris/Tris.tsx (156 righe)
+- frontend/src/app/tris/page.tsx (6 righe)
+- frontend/src/app/layout.tsx (21 righe)
+- frontend/src/globals.css (5 righe)
+- bash (2 righe)
+- bash (1 righe)
+- bash (3 righe)
+- frontend/Dockerfile (23 righe)
+- infra/docker-compose.yml (17 righe)
+- dotenv (3 righe)
+- makefile (6 righe)
+- github/workflows/frontend-ci.yml (36 righe)
+- bash (3 righe)
+- bash (2 righe)
+- json (6 righe)
+- javascript (54 righe)
+- javascript (19 righe)
+- frontend/README.md (10 righe)
+- tests/test_tris_component.py (34 righe)
+- frontend/src/components/tris/__tests__/Tris.test.tsx (95 righe)
+
+QA Status: approved
+Security Audit: PASS
+
 # CHANGELOG
 
 ## [2026-09-29] - refactor(models): migrate to gpt-5-mini/gpt-5-nano/Phi-4-mini per deprecazione gpt-4o-mini
