@@ -1,4 +1,49 @@
 
+### [2026-09-29 15:25:13 UTC] feat(frontend): abilitare avvio locale e punti di accesso per test manuale
+Implementazione: Come provo questo sitoweb quindi? prima di mandare i lavori agli altri agenti rispondi a me
+
+File coinvolti:
+- typescript (29 righe)
+- env (10 righe)
+- typescript (15 righe)
+- typescript (12 righe)
+- css (10 righe)
+- typescript (24 righe)
+- typescript (23 righe)
+- typescript (21 righe)
+- typescript (10 righe)
+- typescript (10 righe)
+- typescript (10 righe)
+- typescript (76 righe)
+- typescript (84 righe)
+- infra/docker-compose.yml (43 righe)
+- infra/docker-compose.ci.yml (20 righe)
+- frontend/Dockerfile (14 righe)
+- mock-backend/Dockerfile (6 righe)
+- bash (1 righe)
+- bash (1 righe)
+- bash (1 righe)
+- bash (1 righe)
+- bash (1 righe)
+- backend/app/main.py (191 righe)
+- backend/requirements.txt (3 righe)
+- backend/Dockerfile (18 righe)
+- backend/README.md (20 righe)
+- bash (2 righe)
+- bash (1 righe)
+- python (6 righe)
+- python (12 righe)
+- python (10 righe)
+- bash (2 righe)
+- bash (1 righe)
+- bash (1 righe)
+- tris/README.md (12 righe)
+- backend/tests/test_main.py (98 righe)
+
+QA Status: approved
+Security Audit: PASS
+
+
 ### [2026-09-29 14:58:37 UTC] feat(frontend): preparare avvio locale e punti di accesso per test manuale
 Implementazione: come li posso testare di persona?
 

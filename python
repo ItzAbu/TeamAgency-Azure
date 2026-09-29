@@ -1,0 +1,10 @@
+from playwright.sync_api import sync_playwright
+
+def test_homepage_loads():
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page()
+        page.goto("http://localhost:3000")
+        assert page.title() != ""
+        assert page.locator("text=Login").is_visible()
+        browser.close()

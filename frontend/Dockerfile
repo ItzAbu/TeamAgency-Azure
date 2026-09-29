@@ -1,23 +1,14 @@
-# Stage 1: build
-FROM node:18-alpine AS builder
-
+# multi-stage build per frontend produzione (se serve)
+FROM node:18-alpine AS build
 WORKDIR /app
-
 COPY package*.json ./
-RUN npm install --production=false
+RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2: serve
-FROM nginx:alpine
-
-COPY --from=builder /app/build /usr/share/nginx/html
-
-ENV PORT=80
-
-EXPOSE ${PORT}
-
-# Healthcheck: verifica se nginx serve la homepage
-HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 CMD wget --spider -q http://localhost:${PORT}/ || exit 1
-
-CMD ["nginx", "-g", "daemon off;"]
+FROM node:18-alpine AS production
+WORKDIR /app
+COPY --from=build /app/build ./build
+COPY package*.json ./
+RUN npm install --production
+CMD ["npx", "serve", "-s", "build", "-l", "3000"]
