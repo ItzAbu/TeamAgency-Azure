@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: NomeProgetto API
+  version: 0.1.0
+paths:
+  /games:
+    get:
+      summary: Elenca tutte le partite
+      responses:
+        '200':
+          description: Lista di partite
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Game'
+  /games/{id}:
+    get:
+      summary: Dettagli di una partita specifica
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dettaglio partita
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
+components:
+  schemas:
+    Game:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identificativo univoco della partita
+        date:
+          type: string
+          format: date-time
+          description: Data e ora della partita
+        players:
+          type: array
+          items:
+            type: string
+          description: Lista di giocatori coinvolti
+        botLevel:
+          type: string
+          enum: [easy, medium, hard]
+          description: Livello di difficoltà del bot
+        score:
+          type: integer
+          description: Punteggio totale raggiunto
+
+# API Comments (interni)
+// Nel codice sorgente:
+// - Funzione getGames(): recupera lista partite dal DB
+// - Funzione getGameById(id): recupera partita specifica
+// - Funzione createGame(data): crea nuova partita nel DB
+// - Funzione updateGame(id, data): aggiorna partita esistente
+// - Funzione deleteGame(id): elimina partita

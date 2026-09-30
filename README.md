@@ -1,16 +1,11 @@
-# WMS Application
+# Next.js Static Export with Docker and Azure Static Web Apps CI/CD
 
-Warehouse Management System multi-tenant sviluppato dal team AI gerarchico.
+## Overview
+This repository contains a Next.js app configured for static export and deployment to Azure Static Web Apps with the following features:
+- Multi-stage Dockerfile for local builds and static export serving via nginx.
+- GitHub Actions CI workflow with lint, tests, build, and Azure deploy.
+- Deployment uses Azure Static Web Apps for optimized low-cost static hosting.
 
-## 🤖 Modelli AI (Azure AI Foundry)
-- **gpt-5-mini**: HeadAgent (Orchestrazione) & SecurityAgent (Audit & Compliance)
-- **gpt-5-nano**: Backend, Frontend, DevOps, Research (Worker specialisti)
-- **Phi-4-mini-instruct**: QAAgent (Review & Test) & DocsAgent (Documentazione)
+## Local development with Docker
 
-> **Nota Architetturale (2026-09-29):** Migrazione a gpt-5-mini, gpt-5-nano e Phi-4-mini-instruct (gpt-4.1-mini in deprecazione, gpt-4o-mini non più distribuibile).
-
-## Stack
-- FastAPI
-- PostgreSQL + Redis
-- Next.js / React + Tailwind CSS
-- Docker & Azure Container Apps
+### Build and run container

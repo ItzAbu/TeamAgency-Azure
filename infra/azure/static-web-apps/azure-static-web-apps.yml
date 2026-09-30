@@ -1,0 +1,3 @@
+# This ARM/Bicep config is optional if you prefer creating Azure Static Web App via Azure Portal CLI
+# Alternatively, deploy Azure Static Web App via portal or az cli:
+# az staticwebapp create --resource-group <RG> --name <APP_NAME> --source <GITHUB_REPO_URL> --location westeurope --app-location "/" --output-location "out" --branch main --login-with-github
