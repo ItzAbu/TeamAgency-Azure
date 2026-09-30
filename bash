@@ -1,1 +1,0 @@
-pytest tests/e2e/test_homepage.py
